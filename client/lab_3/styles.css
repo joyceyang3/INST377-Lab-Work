@@ -26,6 +26,9 @@
     display: flex;
     justify-content: flex-end;
   }
+  .group-project-link {
+    border: 1px solid #5995DA;
+  }
   .mainpage {
     margin-left: 20px;
   }
