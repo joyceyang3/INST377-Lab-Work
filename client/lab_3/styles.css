@@ -26,9 +26,6 @@
     display: flex;
     justify-content: flex-end;
   }
-  .group-project-link {
-    border: 1px solid #5995DA;
-  }
   .mainpage {
     margin-left: 20px;
   }
@@ -45,6 +42,11 @@
     justify-content: space-between;
     align-items: center;
     justify-content: center;
+  }
+  .github-link,
+  .group-link {
+    align-self: flex-end;
+    margin-bottom: 20px;
   }
   .photo-grid-container {
     display: flex;
