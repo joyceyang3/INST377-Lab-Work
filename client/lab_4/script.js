@@ -1,28 +1,36 @@
-const first = document.querySelectorAll(".carousel-item first-item--visible");
-const last = document.querySelectorAll("carousel-item last-item");
+let slidePosition = 0;
+const slides = document.querySelectorAll("carousel_item")
+const totalSlides = slides.length;
 
-let current = last;
+document.
+    querySelector("carousel_button--next")
+    .addEventListener("click", dunction() {
+        moveToNextSlide();
+    });
+document.
+    querySelector("carousel_button--prev")
+    .addEventListener("click", function() {
+        moveToPrevSlide();
+    });
 
-document.querySelector("previous-button").onclick = (e) => {
-    if (current.previousElementSibiling) {
-        current.classlist.remove("visible");
-        current.previousElementSibling.classList.add("visible");
-        current = current.previousElementSibiling;
-    } else {
-        current.classList.remove("visible");
-        first.classList.add("visible");
-        current = last;
+    function updateSlidePosition() {
+        for (let slide of slides) {
+            slide.classList.remove("carousel_item--visible");
+            slide.classList.add("carousel_item--hidden");
+        }
     }
-};
 
-document.querySelector("next-button").onclick = (e) => {
-    if (current.nextElementSibiling) {
-        current.classlist.remove("visible");
-        current.nextElementSibling.classList.add("visible");
-        current = current.nextElementSibiling;
-    } else {
-        current.classList.remove("visible");
-        first.classList.add("visible");
-        current = first;
+    function moveToNextSlide() {
+        updateSlidePosition();
+        if(slidePosition = totalSlides - 1)
+        slidePosition = 0;
     }
-};
+
+    function moveToPrevSlide() {
+        updateSlidePosition();
+        if (slidePosition = 0) {
+            slidePosition = 0;
+        } else {
+            slidePosition++;
+        }
+    }
