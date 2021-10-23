@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab6</title>
+</head>
+<body>
+  <h1>Assignment 2</h1>
+    <div class="notification is-primary">Joyce Yang's Lab 6</div>
+    <div class="columns is-centered is-desktop">
+      <div class="column is-3">
+        <form class="box" method="" action="" onsubmit="return false;" id="search-form">
+          <div class="search-term">
+            <label class="label">Search Term</label>
+            <div class="control">
+              <input name="search_term" class="input" type="text" id="search-term">
+            </div>
+          </div>
+
+          <div class="search">
+            <label class="label">Search By</label>
+            <div class="control">
+              <label class="zip">
+                <input type="radio" name="search_type" value="zip">
+                Zip Code
+              </label>
+              <label class="resturant">
+                <input type="radio" name="search_type" value="name" checked>
+                Resturant Name
+              </label>
+            </div>
+          </div>
+
+          <button class="button is-primary">Submit</button>
+      </form>
+      </div>
+      <div class="column is-8">
+        <div class="card">
+          <div class="card-content">
+            <h3 class="title is-3">Resturant Search Results</h3>
+
+            <div class="notification is-primary" id="no-results">
+              Search in the query on top for resturants.
+            </div>
+            <div class="table-container">
+              <table class="table is-hidden is-fullwidth" id="result-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Title</th>
+                      <th>Address</th>
+                      <th>State</th>
+                      <th>Zip</th>
+                    </tr>
+                  </thead>
+                  <tbody id="result-table-results"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
