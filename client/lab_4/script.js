@@ -1,6 +1,7 @@
-let current = first;
 const first = document.querySelectorAll(".carousel-item first-item--visible");
 const last = document.querySelectorAll("carousel-item last-item");
+
+let current = last;
 
 document.querySelector("previous-button").onclick = (e) => {
     if (current.previousElementSibiling) {
