@@ -3,25 +3,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bulma.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <title>Lab5</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css" /> 
 </head>
 <body>
-
-    <div class="columns is-vcentered">
-        <div class="column is-8">
-          <p class="bd-notification is-primary">Joyce Yang Lab 5</p>
-        </div>
-        
+  <div class="columns is-vcentered">
+    <div class="column is-8">
+      <p class="notification is-primary">Joyce Yang's Lab 5</p>
     </div>
-    <div class="columns is-vcentered">
-        <div class="column is-8">
-          <p class="bd-notification is-primary">First column</p>
+  <div class="columns is-centered is-vcentered"> 
+    <div class="column is-one-quarter">
+      <form class="box" method="GET" action="/api">
+        <div class="form">
+          <label class="label">First Name</label>
+          <div class="control">
+            <input name="first_name" class="input" type="text">
+          </div>
         </div>
-        <div class="column">
-          <p class="bd-notification is-primary">Second column with more content. This is so you can see the vertical alignment.</p>
+
+        <div class="form">
+          <label class="label">Food Preference</label>
+          <div class="control">
+            <input name="food" class="input" type="text">
+          </div>
+        </div>
+
+        <div class="form">
+          <label class="label">Veggie or Vegan?</label>
+          <div class="control">
+            <label class="veg">
+              <input type="veg" name="veggie">
+              Yes
+            </label>
+            <label class="veg">
+              <input type="veg" name="vegan">
+              No
+            </label>
+          </div>
+        </div>
+
+        <button class="button is-primary">Submit</button>
+    </form>
+    </div>
+    <div class="column is-one-third">
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            This is going to be something in two weeks.
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+    
+
 </body>
 </html>
